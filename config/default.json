@@ -1,0 +1,4 @@
+{
+    "mongoURI": "mongodb+srv://raunakb:1234@cluster0.7iez0.mongodb.net/dotenv?retryWrites=true&w=majority",
+    "jwtSecret": "Future@Billionare"
+}
