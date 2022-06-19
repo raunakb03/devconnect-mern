@@ -10,7 +10,8 @@ const { check, validationResult } = require("express-validator");
 // access   Private
 router.get("/me", auth, async (req, res) => {
   try {
-    const profile = await Profile.findOne({ user: req.user.id }).populate( // this will populate name and avatar form user schema
+    const profile = await Profile.findOne({ user: req.user.id }).populate(
+      // this will populate name and avatar form user schema
       "user",
       ["name", "avatar"]
     ); // this user is the user in the profile model whose type was mongoose.schema.types.objectId
@@ -139,6 +140,26 @@ router.get("/user/:user_id", async (req, res) => {
       return res.status(400).json({ msg: "Profile not found" });
     }
     res.status(500).send("server error");
+  }
+});
+
+// @route   DELETE api/profile
+// @desc    Delete profile, user and posts
+// access   Private
+router.delete("/", auth, async (req, res) => {
+  try {
+    // TODO- remove users posts
+
+    // remove profile
+    await Profile.findOneAndRemove({ user: req.user.id });
+
+    //remove user
+    await User.findOneAndRemove({ _id: req.user.id });
+
+    res.json({msg: "user deleted"})
+  } catch (error) {
+    console.log(error);
+    res.status(500).send("Server error");
   }
 });
 
