@@ -229,7 +229,10 @@ router.delete("/experience/:exp_id", auth, async (req, res) => {
 
     await profile.save();
     res.json(profile);
-  } catch (error) {}
+  } catch (error) {
+    console.log(error)
+    res.status(500).send('server error')
+  }
 });
 
 // @route   PUT api/profile/education
