@@ -15,8 +15,8 @@ Alert.propTypes = {
   alerts: PropTypes.array.isRequired,
 };
 
-const mapStateToProps = (state) => ({
-  alerts: state.alert,
+const mapStateToProps = (state) => ({ // this take all the state from the root reducer
+  alerts: state.alert, // here we are only using the alert reducer from the root reducer
 });
 
 export default connect(mapStateToProps)(Alert);

@@ -15,3 +15,8 @@ export default function (state = initialState, action) {
       return state;
   }
 }
+
+
+//here we made initialState an array. This array contains objects and eaxh oject contains {id, message, alertType}
+
+// where as in the alert type we took initialState as a single onject as there will be a single user authenticating at a single time and the object containsa information related to the authentication of the user 
