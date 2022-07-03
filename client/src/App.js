@@ -5,7 +5,7 @@ import Navbar from "./Components/layout/Navbar";
 import Landing from "./Components/layout/Landing";
 import Register from "./Components/auth/Register";
 import Login from "./Components/auth/Login";
-import Alert from "./Components/layout/Alert";
+import Dashboard from "./Components/dashboard/Dashboard";
 import { loadUser } from "./actions/auth";
 import setAuthToken from "./utils/setAuthToken";
 
@@ -27,11 +27,11 @@ const App= ()=>{
       <Provider store={store}>
         <Router>
           <Navbar />
-          <Alert />
           <Routes>
             <Route path="/" element={<Landing />} />
-            <Route path="register" element={<Register />} />
-            <Route path="login" element={<Login />} />
+            <Route path="/register" element={<Register />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/dashboard" element={<Dashboard />} />
           </Routes>
         </Router>
       </Provider>
