@@ -1,17 +1,20 @@
 const express = require("express");
 const connectDB = require("./config/db");
+const cors = require("cors");
 
 const app = express();
 
 // connecting to db
 connectDB();
 
+app.use(cors());
+
 app.get("/", (req, res) => {
   res.send("API Running");
 });
 
 // middlewares
-app.use(express.json())
+app.use(express.json());
 
 // define routes
 app.use("/api/users", require("./routes/api/users"));
