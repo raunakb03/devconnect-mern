@@ -8,6 +8,7 @@ import Login from "./Components/auth/Login";
 import Dashboard from "./Components/dashboard/Dashboard";
 import { loadUser } from "./actions/auth";
 import setAuthToken from "./utils/setAuthToken";
+import PrivateRoute from "./Components/routing/PrivateRoute";
 
 //redux 
 import {Provider} from 'react-redux'
@@ -31,7 +32,10 @@ const App= ()=>{
             <Route path="/" element={<Landing />} />
             <Route path="/register" element={<Register />} />
             <Route path="/login" element={<Login />} />
-            <Route path="/dashboard" element={<Dashboard />} />
+            <Route
+              path="dashboard"
+              element={<PrivateRoute component={Dashboard} />}
+            />
           </Routes>
         </Router>
       </Provider>
