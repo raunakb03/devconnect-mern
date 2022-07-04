@@ -6,6 +6,7 @@ import Landing from "./Components/layout/Landing";
 import Register from "./Components/auth/Register";
 import Login from "./Components/auth/Login";
 import Dashboard from "./Components/dashboard/Dashboard";
+import CreateProfile from "./Components/profile-form/CreateProfile";
 import { loadUser } from "./actions/auth";
 import setAuthToken from "./utils/setAuthToken";
 import PrivateRoute from "./Components/routing/PrivateRoute";
@@ -35,6 +36,10 @@ const App= ()=>{
             <Route
               path="dashboard"
               element={<PrivateRoute component={Dashboard} />}
+            />
+            <Route
+              path="/create-profile"
+              element={<PrivateRoute component={CreateProfile} />}
             />
           </Routes>
         </Router>
