@@ -6,6 +6,7 @@ import Landing from "./Components/layout/Landing";
 import Register from "./Components/auth/Register";
 import Login from "./Components/auth/Login";
 import Dashboard from "./Components/dashboard/Dashboard";
+import EditProfile from "./Components/profile-form/EditProfile";
 import CreateProfile from "./Components/profile-form/CreateProfile";
 import { loadUser } from "./actions/auth";
 import setAuthToken from "./utils/setAuthToken";
@@ -40,6 +41,10 @@ const App= ()=>{
             <Route
               path="/create-profile"
               element={<PrivateRoute component={CreateProfile} />}
+            />
+            <Route
+              path="/edit-profile"
+              element={<PrivateRoute component={EditProfile} />}
             />
           </Routes>
         </Router>

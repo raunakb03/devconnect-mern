@@ -74,7 +74,7 @@ router.post(
     if (status) profileFields.status = status;
     if (githubusername) profileFields.githubusername = githubusername;
     if (skills) {
-      profileFields.skills = skills.split(",").map((skill) => skill.trim());
+      profileFields.skills = skills;
     }
 
     // Build social object
@@ -230,8 +230,8 @@ router.delete("/experience/:exp_id", auth, async (req, res) => {
     await profile.save();
     res.json(profile);
   } catch (error) {
-    console.log(error)
-    res.status(500).send('server error')
+    console.log(error);
+    res.status(500).send("server error");
   }
 });
 

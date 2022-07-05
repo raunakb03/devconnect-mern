@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import Spinner from "../layout/Spinner";
+import DashboardActions from "./DashboardActions";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
@@ -26,7 +27,9 @@ const Dashboard = ({
         <span> Welcome {user && user.name}</span>
       </p>
       {profile !== null ? (
-        <></>
+        <>
+          <DashboardActions />
+        </>
       ) : (
         <>
           <p>You have not yet setup a profile, please add some info</p>
