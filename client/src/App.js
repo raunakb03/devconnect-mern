@@ -5,6 +5,7 @@ import Navbar from "./Components/layout/Navbar";
 import Landing from "./Components/layout/Landing";
 import Register from "./Components/auth/Register";
 import Login from "./Components/auth/Login";
+import Alert from "./Components/layout/Alert";
 import Dashboard from "./Components/dashboard/Dashboard";
 import EditProfile from "./Components/profile-form/EditProfile";
 import CreateProfile from "./Components/profile-form/CreateProfile";
@@ -32,6 +33,9 @@ const App = () => {
       <Provider store={store}>
         <Router>
           <Navbar />
+          <div className="container">
+            <Alert />
+          </div>
           <Routes>
             <Route path="/" element={<Landing />} />
             <Route path="/register" element={<Register />} />
