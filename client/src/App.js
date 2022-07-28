@@ -1,4 +1,4 @@
-import React, {useEffect} from "react";
+import React, { useEffect } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "./App.css";
 import Navbar from "./Components/layout/Navbar";
@@ -9,22 +9,23 @@ import Dashboard from "./Components/dashboard/Dashboard";
 import EditProfile from "./Components/profile-form/EditProfile";
 import CreateProfile from "./Components/profile-form/CreateProfile";
 import AddExperience from "./Components/profile-form/AddExperience";
+import AddEducation from "./Components/profile-form/AddEducation";
 import { loadUser } from "./actions/auth";
 import setAuthToken from "./utils/setAuthToken";
 import PrivateRoute from "./Components/routing/PrivateRoute";
 
-//redux 
-import {Provider} from 'react-redux'
+//redux
+import { Provider } from "react-redux";
 import store from "./store";
 
 if (localStorage.token) {
   setAuthToken(localStorage.token);
 }
 
-const App= ()=>{
-  useEffect(()=>{
-    store.dispatch(loadUser())
-  }, [])
+const App = () => {
+  useEffect(() => {
+    store.dispatch(loadUser());
+  }, []);
 
   return (
     <>
@@ -51,12 +52,15 @@ const App= ()=>{
               path="/add-experience"
               element={<PrivateRoute component={AddExperience} />}
             />
+            <Route
+              path="/add-education"
+              element={<PrivateRoute component={AddEducation} />}
+            />
           </Routes>
         </Router>
       </Provider>
     </>
   );
-}
+};
 
 export default App;
-
