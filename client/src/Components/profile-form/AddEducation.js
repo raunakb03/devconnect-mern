@@ -27,7 +27,7 @@ const AddEducation = ({ addEducation }) => {
   };
 
   return (
-    <section className="container">
+    <section>
       {/* <Alert /> */}
       <h1 className="large text-primary">Add Your Education</h1>
       <p className="lead">

@@ -27,7 +27,7 @@ const AddExperience = ({ addExperience }) => {
   };
 
   return (
-      <section className="container">
+      <section>
         {/* <Alert /> */}
         <h1 className="large text-primary">Add An Experience</h1>
         <p className="lead">

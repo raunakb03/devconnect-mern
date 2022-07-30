@@ -49,7 +49,7 @@ const CreateProfile = ({ createProfile }) => {
   };
 
   return (
-    <section className="container">
+    <section>
       {/* <Alert /> */}
       <h1 className="large text-primary">Create Your Profile</h1>
       <p className="lead">

@@ -34,7 +34,7 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
   }
 
   return (
-    <section className="container">
+    <section>
       {/* <Alert/> */}
       <h1 className="large text-primary">Sign Up</h1>
       <p className="lead">

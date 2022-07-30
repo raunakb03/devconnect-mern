@@ -27,8 +27,7 @@ const Login = ({ login, isAuthenticated }) => {
   }
 
   return (
-    <section className="container">
-      {/* <Alert/> */}
+    <section>
       <h1 className="large text-primary">Sign In</h1>
       <p className="lead">
         <i className="fas fa-user" /> Sign Into Your Account

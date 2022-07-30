@@ -20,11 +20,11 @@ const Dashboard = ({
   }, []);
 
   return loading && profile === null ? (
-    <section className="container">
+    <section>
       <Spinner />
     </section>
   ) : (
-    <section className="container">
+    <section>
       <h1 className="large text-primary">Dashboard</h1>
       <p className="lead">
         <i className="fas fa-user"> </i>
