@@ -9,6 +9,7 @@ import Alert from "./Components/layout/Alert";
 import Dashboard from "./Components/dashboard/Dashboard";
 import EditProfile from "./Components/profile-form/EditProfile";
 import CreateProfile from "./Components/profile-form/CreateProfile";
+import Profile from "./Components/profile/Profile";
 import AddExperience from "./Components/profile-form/AddExperience";
 import AddEducation from "./Components/profile-form/AddEducation";
 import Profiles from "./Components/profiles/Profiles";
@@ -41,6 +42,7 @@ const App = () => {
               <Route path="/register" element={<Register />} />
               <Route path="/login" element={<Login />} />
               <Route path="/profiles" element={<Profiles />} />
+              <Route path="/profile/:id" element={<Profile />} />
               <Route
                 path="dashboard"
                 element={<PrivateRoute component={Dashboard} />}
