@@ -1,3 +1,4 @@
+/* Global Styles */
 :root {
   --primary-color: #17a2b8;
   --dark-color: #343a40;
@@ -71,6 +72,10 @@ img {
 
 .text-dark {
   color: var(--dark-color);
+}
+
+.post-font-size{
+  font-size: 1rem;
 }
 
 /* Padding */
@@ -573,11 +578,4 @@ button {
   .post button {
     padding: 0.3rem 0.4rem;
   }
-}
-
-.alert-wrapper {
-  position: fixed;
-  top: 4rem;
-  right: 2rem;
-  display: inline-block;
 }

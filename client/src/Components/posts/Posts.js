@@ -2,14 +2,31 @@ import React, { useEffect } from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { getPosts } from "../../actions/post";
+import PostItem from "./PostItem";
 import Spinner from "../layout/Spinner";
 
 const Posts = ({ getPosts, post: { posts, loading } }) => {
   useEffect(() => {
     getPosts();
-  }, []);
+  }, [getPosts]);
 
-  return <div>Posts</div>;
+  return loading ? (
+    <Spinner />
+  ) : (
+    <>
+      <h1 className="text-primary post-font-size">
+        <p className="lead">
+          <i className="fas fas-user"></i> Welcome to the community
+        </p>
+        {/* post form */}
+        <div className="posts">
+          {posts.map((post) => (
+            <PostItem key={post._id} post={post} />
+          ))}
+        </div>
+      </h1>
+    </>
+  );
 };
 
 Posts.propTypes = {
