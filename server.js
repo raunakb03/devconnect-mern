@@ -9,10 +9,6 @@ connectDB();
 
 app.use(cors());
 
-app.get("/", (req, res) => {
-  res.send("API Running");
-});
-
 // middlewares
 app.use(express.json());
 
