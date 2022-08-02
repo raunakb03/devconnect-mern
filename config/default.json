@@ -1,6 +1,0 @@
-{
-    "mongoURI": "mongodb+srv://raunakb:1234@cluster0.7iez0.mongodb.net/dotenv?retryWrites=true&w=majority",
-    "jwtSecret": "Future@Billionare",
-    "githubClientId": "498e48c38d85fa101a94",
-    "githubSecret": "5b070f7c913269cb828ace0a2b9833aab5485635"
-}
