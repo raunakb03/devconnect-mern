@@ -10,7 +10,7 @@ import {
   GET_PROFILES,
 } from "./types";
 
-const API_KEY = "http://localhost:5000";
+const API_KEY = "https://mern-devconnect-raunak.onrender.com";
 
 // get current users profile
 export const getCurrentProfile = () => async (dispatch) => {

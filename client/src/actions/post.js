@@ -11,7 +11,7 @@ import {
 import axios from "axios";
 import { setAlert } from "./alert";
 
-const API_KEY = "http://localhost:5000";
+const API_KEY = "https://mern-devconnect-raunak.onrender.com";
 
 // get posts
 export const getPosts = () => async (dispatch) => {

@@ -13,7 +13,7 @@ import {
 
 import setAuthToken from "../utils/setAuthToken"; // this is setting the header in the axios
 
-const API_KEY = "http://localhost:5000";
+const API_KEY = "https://mern-devconnect-raunak.onrender.com";
 
 // load user
 export const loadUser = () => async (dispatch) => {
